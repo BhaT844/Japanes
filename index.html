@@ -15,28 +15,30 @@
     <div id="answerButton" class="no-drag hidden">정답</div>
     <div id="setting" class="no-drag">
         <input type="radio" id="onlyjp" name="type" checked>
-        <label for="onlyjp">일본어만</label>
+        <label for="onlyjp" id="jp-label">일본어만</label>
         <input type="radio" id="onlypron" name="type">
-        <label for="onlypron">발음만</label>
+        <label for="onlypron" id="pron-label">발음만</label>
         <input type="radio" id="both" name="type">
         <label for="both">둘다</label>
         <hr>
-        <input type="radio" id="hiragana" name="japanese" checked>
+        <input type="radio" id="hiragana" name="japanese" checked onclick="kanjiActivated()">
         <label for="hiragana">히라가나</label>
-        <input type="radio" id="katakana" name="japanese">
+        <input type="radio" id="katakana" name="japanese" onclick="kanjiActivated()">
         <label for="katakana">가타카나</label>
-        <input type="radio" id="hirakana" name="japanese">
+        <input type="radio" id="hirakana" name="japanese" onclick="kanjiActivated()">
         <label for="hirakana">히라가나, 가타카나</label>
-        <input type="radio" id="kanji" name="japanese">
+        <input type="radio" id="kanji" name="japanese" onclick="kanjiUnactivated()">
         <label for="kanji">한자</label>
         <hr>
-        <input type="checkbox" id="tak" name="choice">
-        <label for="tak">탁음, 반탁음</label>
         <input type="checkbox" id="yoeum" name="choice">
         <label for="yoeum">요음</label>
+        <input type="checkbox" id="takeum" name="choice">
+        <label for="takeum">탁음, 반탁음</label>
     </div>
     <script src="src/hiragana.js"></script>
     <script src="src/katakana.js"></script>
+    <script src="src/kanji.js"></script>
     <script src="src/index.js"></script>
+    <script src="src/kanjiClick.js"></script>
 </body>
 </html>
