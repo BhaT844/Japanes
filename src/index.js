@@ -15,10 +15,27 @@ function changeQuiz() {
     else cheak = Math.random() > 0.49999999999;
     
     //japanese check
-    if (hiraCheck) 합쳐진거 = 합쳐진거.concat(hiragana);
-    else if (kataCheck) 합쳐진거 = 합쳐진거.concat(katakana);
-    else if (kanjiCheck) 합쳐진거 = 합쳐진거.concat(grade_8);
-    else 합쳐진거 = 합쳐진거.concat(hiragana, katakana);
+    if (hiraCheck) {
+        합쳐진거 = [
+            ...hiragana
+        ]
+    }
+    else if (kataCheck) {
+        합쳐진거 = [
+            ...katakana
+        ]
+    }
+    else if (kanjiCheck) {
+        합쳐진거 = [
+            ...grade_8
+        ]
+    }
+    else {
+        합쳐진거 = [
+            ...hiragana,
+            ...katakana
+        ]
+    }
 
     if(!kanjiCheck) {
         //takeum check
