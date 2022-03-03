@@ -10,53 +10,53 @@ function changeQuiz() {
     const kanjiCheck = document.getElementById("kanji").checked;
     
     //type check
-    if (document.getElementById("onlyjp").checked) cheak = true;
-    else if (document.getElementById("onlypron").checked) cheak = false;
-    else cheak = Math.random() > 0.49999999999;
+    if (document.getElementById("onlyjp").checked) { cheak = true; }
+    else if (document.getElementById("onlypron").checked) { cheak = false; }
+    else { cheak = Math.random() > 0.49999999999; }
     
     //japanese check
     if (hiraCheck) {
         합쳐진거 = [
             ...hiragana
-        ]
+        ];
     }
     else if (kataCheck) {
         합쳐진거 = [
             ...katakana
-        ]
+        ];
     }
     else if (kanjiCheck) {
         합쳐진거 = [
             ...grade_8
-        ]
+        ];
     }
     else {
         합쳐진거 = [
             ...hiragana,
             ...katakana
-        ]
+        ];
     }
 
     if(!kanjiCheck) {
         //takeum check
         const takeumCheck = document.getElementById("takeum").checked;
         if (takeumCheck) {
-            if (hiraCheck) 합쳐진거 = 합쳐진거.concat(hiratak);
-            else if (kataCheck) 합쳐진거 = 합쳐진거.concat(katatak);
-            else 합쳐진거 = 합쳐진거.concat(hiratak, katatak);
+            if (hiraCheck) { 합쳐진거 = 합쳐진거.concat(hiratak); }
+            else if (kataCheck) { 합쳐진거 = 합쳐진거.concat(katatak); }
+            else { 합쳐진거 = 합쳐진거.concat(hiratak, katatak); }
         }
         //yoeum check
         const yoeumCheck = document.getElementById("yoeum").checked;
         if (yoeumCheck) {
-            if (hiraCheck) 합쳐진거 = 합쳐진거.concat(hirayoeum);
-            else if (kataCheck) 합쳐진거 = 합쳐진거.concat(katayoeum);
-            else 합쳐진거 = 합쳐진거.concat(hirayoeum, katayoeum);
+            if (hiraCheck) { 합쳐진거 = 합쳐진거.concat(hirayoeum); }
+            else if (kataCheck) { 합쳐진거 = 합쳐진거.concat(katayoeum); }
+            else { 합쳐진거 = 합쳐진거.concat(hirayoeum, katayoeum); }
         }
         //yoeum and takeum check
         if (yoeumCheck && takeumCheck) {
-            if (hiraCheck) 합쳐진거 = 합쳐진거.concat(hirayotak);
-            else if (kataCheck) 합쳐진거 = 합쳐진거.concat(katayotak);
-            else 합쳐진거 = 합쳐진거.concat(hirayotak, katayotak);
+            if (hiraCheck) { 합쳐진거 = 합쳐진거.concat(hirayotak); }
+            else if (kataCheck) { 합쳐진거 = 합쳐진거.concat(katayotak); }
+            else { 합쳐진거 = 합쳐진거.concat(hirayotak, katayotak); }
         }
     }
 
@@ -70,11 +70,8 @@ function answer() {
 }
 
 function pressKey(event) {
-    if (event.code === "Space") {
-        changeQuiz();
-    } else if (event.code === "Enter") {
-        answer();
-    }
+    if (event.code === "Space") { changeQuiz(); }
+    else if (event.code === "Enter") { answer(); }
 }
 
 changeQuiz();

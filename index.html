@@ -11,8 +11,10 @@
     <div id="quiz">
         <span id="result"></span>
     </div>
-    <div id="nextButton" class="no-drag" onclick="changeQuiz()">Next</div>
-    <div id="answerButton" class="no-drag hidden">정답</div>
+    <div id="flex-container">
+        <div class="no-drag button flex-item" onclick="changeQuiz()">Next</div>
+        <div class="no-drag button flex-item" onclick="answer()">정답</div>
+    </div>
     <div id="setting" class="no-drag">
         <input type="radio" id="onlyjp" name="type" checked>
         <label for="onlyjp" id="jp-label">일본어만</label>
@@ -21,19 +23,24 @@
         <input type="radio" id="both" name="type">
         <label for="both">둘다</label>
         <hr>
-        <input type="radio" id="hiragana" name="japanese" checked onclick="kanjiActivated()">
+        <input type="radio" id="hiragana" name="japanese" checked onclick="kanjiUnactivated()">
         <label for="hiragana">히라가나</label>
-        <input type="radio" id="katakana" name="japanese" onclick="kanjiActivated()">
+        <input type="radio" id="katakana" name="japanese" onclick="kanjiUnactivated()">
         <label for="katakana">가타카나</label>
-        <input type="radio" id="hirakana" name="japanese" onclick="kanjiActivated()">
+        <input type="radio" id="hirakana" name="japanese" onclick="kanjiUnactivated()">
         <label for="hirakana">히라가나, 가타카나</label>
-        <input type="radio" id="kanji" name="japanese" onclick="kanjiUnactivated()">
+        <input type="radio" id="kanji" name="japanese" onclick="kanjiActivated()">
         <label for="kanji">한자</label>
         <hr>
         <input type="checkbox" id="yoeum" name="choice">
         <label for="yoeum">요음</label>
         <input type="checkbox" id="takeum" name="choice">
         <label for="takeum">탁음, 반탁음</label>
+    </div>
+    <div id="shortcut-keys">
+        <strong>단축키</strong>
+        <p>Next ☞ Space</p>
+        <p>정답 ☞ Enter</p>
     </div>
     <script src="src/hiragana.js"></script>
     <script src="src/katakana.js"></script>
