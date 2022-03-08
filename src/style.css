@@ -1,6 +1,7 @@
 body {
     background-color: rgb(185, 251, 119);
     margin: auto;
+    padding-top: 52px;
 }
 
 .hidden {
@@ -29,10 +30,13 @@ body {
     width: 10%;
 }
 
+.button:active {
+    transform: scale(0.98);
+}
+
 #title {
     text-align: center;
     font-size: 250%;
-    margin-top: 5%;
 }
 
 #example {
