@@ -201,7 +201,7 @@ const grade_8 = [
     },
 ];
 
-const grade_g7 = [
+const grade_j7 = [
     {
         "w" : "家",
         "p" : "집 가"
